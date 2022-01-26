@@ -1,0 +1,5 @@
+2021-07-08 21:24:11.719  INFO 117576 --- [restartedMain] c.i.immiblog2.Immiblog2Application       : Starting Immiblog2Application using Java 1.8.0_241 on LAPTOP-IBR37OC7 with PID 117576 (C:\Users\STARGAZER\Desktop\Java学习\项目实战\BLOG\immiblog2\target\classes started by STARGAZER in C:\Users\STARGAZER\Desktop\Java学习\项目实战\BLOG\immiblog2)
+2021-07-08 21:24:11.740  INFO 117576 --- [restartedMain] c.i.immiblog2.Immiblog2Application       : The following profiles are active: pro
+2021-07-08 21:24:34.401  WARN 117576 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-07-08 21:24:38.338  WARN 117576 --- [restartedMain] ion$DefaultTemplateResolverConfiguration : Cannot find template location: classpath:/templates/ (please add some templates or check your Thymeleaf configuration)
+2021-07-08 21:24:39.515  INFO 117576 --- [restartedMain] c.i.immiblog2.Immiblog2Application       : Started Immiblog2Application in 32.514 seconds (JVM running for 58.8)

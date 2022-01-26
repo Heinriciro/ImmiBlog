@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head th:replace="/admin/_fragments::head(~{::title})">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width = device-width,initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="../../static/semantic/dist/semantic.min.css">
+    <link rel="stylesheet" type="text/css" href="../../static/css/myblog.css">
+    <link rel="stylesheet" type="text/css" href="../../static/plugin/editor.md-master/css/editormd.min.css">
+    <title>新建分类</title>
+</head>
+<body>
+    <nav th:replace="admin/_fragments::menu(2)" class="ui inverted attached segment">
+        <div class="ui container">
+            <div class="ui inverted secondary stackable menu">
+                <h2 class="ui header teal item secondary m-padded-tb-mini">Control Platform</h2>
+                <a href="" class="menu-item item m-mobile-hidden"><i class="small home icon"></i> 首页</a>
+                <a href="" class="menu-item item m-mobile-hidden"><i class="small idea icon"></i> 分类</a>
+                <a href="" class="menu-item item m-mobile-hidden"><i class="small tags icon"></i> 标签</a>
+                <div class="right menu ">
+                    <div class="ui dropdown item menu-item m-mobile-hidden">
+                        <div class="text">
+                            <img src="../../static/images/gaspar-zaldo.jpg" alt="" class="ui avatar image">
+                            Heinriciro
+                        </div>
+                        <i class="dropdown icon"></i>
+                        <div class="menu">
+                            <a href="" class="item">注销</a>
+                        </div>
+                    </div>
+                </div>
+
+
+
+                <div class="right item m-mobile-hidden">
+                    <div class="ui icon input ">
+                        <input type="text" placeholder="Search..."/>
+                        <i class="search link icon "></i>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <!--菜单下拉图标-->
+        <a href="#" class="ui menu toggle black icon button m-right-top m-mobile-show">
+            <i class="sidebar icon"></i>
+        </a>
+    </nav>
+    <div class="ui attached pointing menu">
+        <div class="ui container">
+            <div class="right menu">
+                <a href="#" th:href="@{/admin/types/create}" class="active item">新建</a>
+                <a href="#" th:href="@{/admin/types}" class="item">列表</a>
+            </div>
+        </div>
+    </div>
+    <!--正文部分-->
+
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <div class="m-container-small m-padded-tb-big">
+        <div class="ui container">
+            <form action=""  th:object="${type}" th:action="*{id}==null? @{/admin/types} : @{/admin/types/{id}(id=*{id})}" method="post" class="ui form">
+                <input type="hidden" name="id" th:value="*{id}">
+                <div class="field">
+                    <div class="ui left labeled input">
+                        <label class="ui teal basic label">名称</label>
+                        <input type="text" name="name" placeholder="新建分类名称" th:value="*{name}">
+                    </div>
+
+                    
+                </div>
+
+
+                <div class="ui error message"></div>
+                <!--/*/
+                    <div class="ui negative message" th:if="${#fields.hasErrors('name')}">
+                    <i class="close icon"></i>
+                    <div class="header">验证失败</div>
+                    <p th:errors="*{name}">提交信息不符合规则</p>
+                </div>
+                /*/-->
+
+
+                <div class="ui container right aligned">
+                    <button type="button" class="ui button" onclick="window.history.go(-1)">返回</button>
+                    <button class="ui teal submit button">提交</button>
+                </div>
+
+            </form>
+        </div>
+    </div>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+
+
+    <!--页面页脚部分-->
+    <footer th:replace="_fragments::footer" class="ui inverted vertical segment m-padded-tb-massive">
+        <div class="ui center aligned container">
+            <div class="ui inverted divided grid stackable">
+                <div class="ui three wide column">
+                    <img src="../../static/images/qrcode.jpg" class="ui rounded image qrcode centered" alt="">
+                </div>
+                <div class="three wide column">
+                    <h4 class="ui inverted header  m-text-spaced ">最新博客</h4>
+                    <div class="ui inverted link list m-text-thin">
+                        <a href="" class="item">用户故事</a>
+                        <a href="" class="item">java学习</a>
+                        <a href="" class="item">研究领域</a>
+                    </div>
+                </div>
+                <div class="four wide column">
+                    <h4 class="ui inverted header  m-text-spaced ">联系我</h4>
+                    <div class="ui inverted link list m-text-thin">
+                        <a href="" class="item">微博</a>
+                        <a href="" class="item">email:ianhuang15@outlook.com</a>
+                        <a href="" class="item">QQ:540856517</a>
+                    </div>
+                </div>
+                <div class="six wide column">
+                    <h4 class="ui inverted header m-text-spaced ">主页介绍</h4>
+                    <p class="m-text-thin m-text-spaced m-opacity-mini">这是Heinriciro的第一个个人主页，为了练习Java开发技巧，使用Semantic-UI制作而成。最终版将会分享学习过程中的笔记经验以及随想。</p>
+                </div>
+            </div>
+            <div class="ui inverted divider section "></div>
+            <p class="m-opacity m-text-thin m-text-spaced">Copyright©2020 Designed By Heinriciro</p>
+        </div>
+
+
+    </footer>
+
+
+
+
+    <!--/*/<th:block th:replace="_fragments :: javascript">/*/-->
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="../../static/semantic/dist/semantic.min.js"></script>
+    <!--/*/</th:block>/*/-->
+
+<script>
+    $('.menu.toggle').on('click',function () {
+       $('.menu-item').toggleClass('m-mobile-hidden');
+    });
+
+    $('.ui.dropdown').dropdown();
+
+    $('.ui.form').form({
+        fields: {
+            name : {
+                identifier: 'name',
+                rules:[{
+                    type:'empty',
+                    prompt: '请输入分类名称'
+                }]
+            }
+        }
+    })
+
+</script>
+
+
+</body>
+</html>

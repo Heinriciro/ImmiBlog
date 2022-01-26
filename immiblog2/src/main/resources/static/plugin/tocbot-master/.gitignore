@@ -1,0 +1,14 @@
+.git
+.publish
+.next
+.DS_Store
+out/
+static/js/*
+static/css/*
+node_modules/
+test-output/
+test/__screenshots-new__
+npm-debug.*
+data/README.json
+data/CHANGELOG.json
+package-lock.json

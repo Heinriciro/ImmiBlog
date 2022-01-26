@@ -1,0 +1,25 @@
+spring:
+
+  messages:
+    basename: i18n/messages
+
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/immiblog?useUnicode=true&characterEncoding=utf-8&serverTimezone=GMT
+    username: root
+    password: forever1997!
+
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+
+logging:
+  level:
+    root: warn
+    com.ianhein: info
+  file:
+    name: log/immiblog-pro.log
+
+server:
+  port: 8081
