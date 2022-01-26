@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width = device-width,initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="../static/semantic/dist/semantic.min.css">
+    <link rel="stylesheet" type="text/css" href="../static/css/myblog.css">
+    <title>关于我</title>
+</head>
+<body>
+    <nav class="ui inverted attached segment m-shadowed-small">
+        <div class="ui container">
+            <div class="ui inverted secondary stackable menu">
+                <h2 class="ui header teal item secondary m-padded-tb-mini">Blog</h2>
+                <a href="" class="menu-item item m-mobile-hidden"><i class="small home icon"></i> 首页</a>
+                <a href="" class="menu-item item m-mobile-hidden"><i class="small idea icon"></i> 分类</a>
+                <a href="" class="menu-item item m-mobile-hidden"><i class="small tags icon"></i> 标签</a>
+                <a href="" class="menu-item item m-mobile-hidden"><i class="small clone icon"></i> 归档</a>
+                <a href="" class="menu-item item m-mobile-hidden"><i class="small info icon"></i> 关于我</a>
+
+
+                <div class="right item m-mobile-hidden">
+                    <div class="ui icon input ">
+                        <input type="text" placeholder="Search..."/>
+                        <i class="search link icon "></i>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <!--菜单下拉图标-->
+        <a href="#" class="ui menu toggle black icon button m-right-top m-mobile-show">
+            <i class="sidebar icon"></i>
+        </a>
+    </nav>
+
+    <!--正文部分-->
+    <div class="m-container-small m-padded-tb-big">
+
+        <div class="ui container">
+            <div class="ui stackable grid">
+                <!--图片-->
+                <div class="eleven wide column">
+
+                    <div class="ui segment">
+                        <img src="../static/images/baptiste-buisson.jpg" alt="" class="ui rounded image centered">
+                    </div>
+
+
+                </div>
+                
+                
+                <!--信息-->
+                <div class="five wide column">
+                    <div class="ui top attached segment">
+                        <div class="ui teal header">关于我</div>
+                    </div>
+                    <div class="ui attached segment">
+                        <p>------------------------------------------------</p>
+                        <p>=========================</p>
+                    </div>
+
+                    <div class="ui attached segment">
+                        <div class="ui labels">
+                            <div class="ui orange basic mini label">信息科学</div>
+                            <div class="ui orange basic mini label">后端开发</div>
+                            <div class="ui orange basic mini label">指弹&Flamingo吉他爱好</div>
+                        </div>
+
+                    </div>
+
+                    <div class="ui attached segment">
+                        <div class="ui labels">
+                            <div class="ui blue basic mini label mmart">Java</div>
+                            <div class="ui blue basic mini label">JavaScript</div>
+                            <div class="ui blue basic mini label">Matlab</div>
+                        </div>
+                    </div>
+                    
+                    <div class="ui bottom attached segment">
+                        <a href="" class="ui circular icon button"><i class="ui github icon"></i></a>
+                        <a href="" class="ui circular icon button"><i class="ui weixin icon"></i></a>
+                        <a href="#" class="ui weibo circular icon button" data-content="Holar" data-position="center bottom"><i class="ui weibo icon"></i></a>
+                    </div>
+
+                    <div class="ui flowing popup transition hidden"></div>
+
+                </div>
+                
+            </div>
+
+        </div>
+    </div>
+
+
+
+    <!--页面页脚部分-->
+    <footer class="ui inverted vertical segment m-padded-tb-massive">
+        <div class="ui center aligned container">
+            <div class="ui inverted divided grid stackable">
+                <div class="ui three wide column">
+                    <img src="../static/images/qrcode.jpg" class="ui rounded image qrcode centered" alt="">
+                </div>
+                <div class="three wide column">
+                    <h4 class="ui inverted header  m-text-spaced ">最新博客</h4>
+                    <div class="ui inverted link list m-text-thin">
+                        <a href="" class="item">用户故事</a>
+                        <a href="" class="item">java学习</a>
+                        <a href="" class="item">研究领域</a>
+                    </div>
+                </div>
+                <div class="four wide column">
+                    <h4 class="ui inverted header  m-text-spaced ">联系我</h4>
+                    <div class="ui inverted link list m-text-thin">
+                        <a href="" class="item">微博</a>
+                        <a href="" class="item">email:ianhuang15@outlook.com</a>
+                        <a href="" class="item">QQ:540856517</a>
+                    </div>
+                </div>
+                <div class="six wide column">
+                    <h4 class="ui inverted header m-text-spaced ">主页介绍</h4>
+                    <p class="m-text-thin m-text-spaced m-opacity-mini">这是Heinriciro的第一个个人主页，为了练习Java开发技巧，使用Semantic-UI制作而成。最终版将会分享学习过程中的笔记经验以及随想。</p>
+                </div>
+            </div>
+            <div class="ui inverted divider section "></div>
+            <p class="m-opacity m-text-thin m-text-spaced">Copyright©2020 Designed By Heinriciro</p>
+        </div>
+
+
+    </footer>
+
+
+
+
+<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+<script src="../static/semantic/dist/semantic.min.js"></script>
+
+<script>
+    $('.menu.toggle').on('click',function () {
+       $('.menu-item').toggleClass('m-mobile-hidden');
+    });
+
+    $('.weibo').popup();
+</script>
+
+
+</body>
+</html>
